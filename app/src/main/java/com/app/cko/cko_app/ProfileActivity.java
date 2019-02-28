@@ -22,5 +22,6 @@ public class ProfileActivity extends AppCompatActivity {
     public void onClickExample(View view){
         Intent intent = new Intent(this,EducationActivity.class);
         startActivity(intent);
+        //////
     }
 }
