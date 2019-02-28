@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">CKO_App</string>
+    <!-- Strings related to login -->
+    <string name="login">Логин</string>
+    <string name="password">Пароль</string>
+    <!-- Strings for profile activity -->
+    <string name="courses">Курсы</string>
+    <!-- Strings for menu -->
+    <string name="profile_btn">Профиль</string>
+    <string name="education_btn">Оценка</string>
+    <string name="news_btn">Новости</string>
+    <string name="notification_btn">Уведомление</string>
+</resources>
