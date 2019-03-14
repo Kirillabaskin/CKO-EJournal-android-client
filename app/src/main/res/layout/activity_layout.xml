@@ -10,25 +10,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:paddingLeft="30dp"
+        android:paddingTop="100dp"
+        android:paddingRight="30dp"
+        android:paddingBottom="30dp"
         app:srcCompat="@drawable/logo_sample" />
 
     <EditText
         android:id="@+id/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:layout_marginLeft="60dp"
         android:layout_marginTop="@dimen/dimen_login"
-        android:inputType="textEmailAddress"
-        android:hint="@string/login" />
+        android:layout_marginRight="60dp"
+        android:ems="10"
+        android:hint="@string/login"
+        android:inputType="textEmailAddress" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:layout_marginLeft="60dp"
         android:layout_marginTop="@dimen/dimen_login"
-        android:inputType="textPassword"
-        android:hint="@string/password"/>
+        android:layout_marginRight="60dp"
+        android:ems="10"
+        android:hint="@string/password"
+        android:inputType="textPassword" />
 
     <Button
         android:id="@+id/btnLogin"
@@ -36,6 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/dimen_login"
-        android:text="Button"
-        android:onClick="onLogginButtonClick"/>
+        android:background="@color/colorPrimaryDark"
+        android:onClick="onLogginButtonClick"
+        android:text="Button" />
 </LinearLayout>

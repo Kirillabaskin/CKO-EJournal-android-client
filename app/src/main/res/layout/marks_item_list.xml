@@ -6,29 +6,39 @@
 
     <TextView
         android:id="@+id/list_date"
-        android:layout_width="3dp"
-        android:layout_height="30sp"
-        android:layout_weight="1"
-        android:text="TextView" />
+        style="@style/TextViewStyle"
+        android:layout_width="60dp"
+        android:layout_height="@dimen/marks_item_height"
+        android:gravity="left|center"
+        android:text="Text"
+        android:textSize="@dimen/marks_item_text_size" />
 
     <TextView
         android:id="@+id/list_title"
-        android:layout_width="88dp"
-        android:layout_height="30sp"
-        android:layout_weight="1"
+        style="@style/TextViewStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/marks_item_height"
+        android:layout_weight="12"
+        android:gravity="left|center"
         android:text="TextView" />
 
     <TextView
+        style="@style/TextViewStyle"
         android:id="@+id/list_mark"
-        android:layout_width="1dp"
-        android:layout_height="30sp"
-        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/marks_item_height"
+        android:layout_weight="3"
+        android:textSize="@dimen/marks_item_text_size"
+        android:gravity="left|center"
         android:text="TextView" />
 
     <TextView
+        style="@style/TextViewStyle"
         android:id="@+id/list_homework"
-        android:layout_width="4dp"
-        android:layout_height="30sp"
-        android:layout_weight="1"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/marks_item_height"
+        android:layout_weight="2"
+        android:textSize="@dimen/marks_item_text_size"
+        android:gravity="left|center"
         android:text="TextView"/>
 </LinearLayout>

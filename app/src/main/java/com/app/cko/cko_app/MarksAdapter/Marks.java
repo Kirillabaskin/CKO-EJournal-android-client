@@ -1,21 +1,20 @@
 package com.app.cko.cko_app.MarksAdapter;
 
-import java.util.Date;
 
 public class Marks {
-    private Date date;
+    private String date;
     private String title;
-    private byte mark;
+    private String mark;
     private String homeWork;
 
-    public Marks(Date date,String title,byte mark,String homeWork){
+    public Marks(String date,String title,String mark,String homeWork){
         this.date=date;
         this.title=title;
         this.mark=mark;
         this.homeWork=homeWork;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
 
@@ -23,7 +22,7 @@ public class Marks {
         return title;
     }
 
-    public byte getMark() {
+    public String getMark() {
         return mark;
     }
 

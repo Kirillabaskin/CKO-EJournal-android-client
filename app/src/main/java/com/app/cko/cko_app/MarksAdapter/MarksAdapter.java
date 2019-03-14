@@ -49,10 +49,10 @@ public class MarksAdapter extends BaseAdapter {
         Marks m=(Marks) getItem(position);
 
 
-        ((TextView)view.findViewById(R.id.list_date)).setText(m.getDate().toString());
+        ((TextView)view.findViewById(R.id.list_date)).setText(m.getDate());
         ((TextView)view.findViewById(R.id.list_title)).setText(m.getTitle());
-        ((TextView)view.findViewById(R.id.list_mark)).setText(String.valueOf(m.getMark()));
-        ((TextView)view.findViewById(R.id.list_date)).setText(m.getHomeWork());
+        ((TextView)view.findViewById(R.id.list_mark)).setText(m.getMark());
+        ((TextView)view.findViewById(R.id.list_homework)).setText(m.getHomeWork());
         return view;
     }
 }

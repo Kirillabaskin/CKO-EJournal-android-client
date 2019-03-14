@@ -1,4 +1,8 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="dimen_login">10dp</dimen>
+    <!-- Dimens for education layout -->
+    <dimen name="marks_item_width">240dp</dimen>
+    <dimen name="marks_item_height">60dp</dimen>
+    <dimen name="marks_item_text_size">20sp</dimen>
 </resources>

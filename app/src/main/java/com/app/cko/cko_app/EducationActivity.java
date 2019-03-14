@@ -23,7 +23,7 @@ public class EducationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.education_layout);
 
-        fillMarks(5);
+        fillMarks(20);
         marksAdapter = new MarksAdapter(this,marksArrayList);
 
         ListView lw=findViewById(R.id.lv_marks);
@@ -31,9 +31,9 @@ public class EducationActivity extends AppCompatActivity {
     }
 
     void fillMarks(int n) {
+        marksArrayList.add(new Marks("Дата","Тема занятия","Оценка","ДЗ"));
         for (int i = 0; i < n; i++) {
-            //TODO: chande Date to Calendar
-            marksArrayList.add(new Marks((new Date((new Date()).getTime())),"work in Class",(byte)5,"HW"));
+            marksArrayList.add(new Marks("15.03","work in Class","5","HW"));
         }
     }
 
