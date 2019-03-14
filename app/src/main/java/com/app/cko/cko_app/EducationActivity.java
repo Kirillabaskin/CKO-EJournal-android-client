@@ -5,13 +5,36 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.ListView;
+
+import com.app.cko.cko_app.MarksAdapter.Marks;
+import com.app.cko.cko_app.MarksAdapter.MarksAdapter;
+
+import java.util.ArrayList;
+import java.util.Date;
 
 public class EducationActivity extends AppCompatActivity {
+
+    ArrayList<Marks> marksArrayList=new ArrayList<Marks>();
+    MarksAdapter marksAdapter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.education_layout);
+
+        fillMarks(5);
+        marksAdapter = new MarksAdapter(this,marksArrayList);
+
+        ListView lw=findViewById(R.id.lv_marks);
+        lw.setAdapter(marksAdapter);
+    }
+
+    void fillMarks(int n) {
+        for (int i = 0; i < n; i++) {
+            //TODO: chande Date to Calendar
+            marksArrayList.add(new Marks((new Date((new Date()).getTime())),"work in Class",(byte)5,"HW"));
+        }
     }
 
     public void onMenuClick(View view){

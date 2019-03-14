@@ -4,7 +4,10 @@
     <string name="login">Логин</string>
     <string name="password">Пароль</string>
     <!-- Strings for profile activity -->
+    <string name="main_activity_title">Профиль</string>
     <string name="courses">Курсы</string>
+    <!-- Strings for marks activity -->
+    <string name="education_title">Оценки</string>
     <!-- Strings for menu -->
     <string name="profile_btn">Профиль</string>
     <string name="education_btn">Оценка</string>
