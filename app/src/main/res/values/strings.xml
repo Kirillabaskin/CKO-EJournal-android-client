@@ -3,9 +3,11 @@
     <!-- Strings related to login -->
     <string name="login">Логин</string>
     <string name="password">Пароль</string>
+    <string name="btn_login">Войти</string>
     <!-- Strings for profile activity -->
     <string name="main_activity_title">Профиль</string>
     <string name="courses">Курсы</string>
+    <string name="my_marks">Оценки</string>
     <!-- Strings for marks activity -->
     <string name="education_title">Оценки</string>
     <!-- Strings for menu -->

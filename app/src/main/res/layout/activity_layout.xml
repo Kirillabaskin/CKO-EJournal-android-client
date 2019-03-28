@@ -3,41 +3,63 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_gradient">
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="221dp"
         android:adjustViewBounds="true"
         android:cropToPadding="false"
         android:paddingLeft="30dp"
         android:paddingTop="100dp"
         android:paddingRight="30dp"
         android:paddingBottom="30dp"
-        app:srcCompat="@drawable/logo_sample" />
+        android:layout_marginTop="40dp"
+        app:srcCompat="@drawable/logo_alfa" />
 
-    <EditText
-        android:id="@+id/login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="@dimen/dimen_login"
-        android:layout_marginRight="60dp"
-        android:ems="10"
-        android:hint="@string/login"
-        android:inputType="textEmailAddress" />
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:layout_width="250dp"
+        android:layout_height="50dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/shape_textblock"
+            android:layout_centerInParent="true"
+            android:padding="5dp"/>
+            <EditText
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="15dp"
+                android:hint="@string/login"
+                android:textColorHint="#BDBDBD"
+                android:textColor="#212121"
+                android:backgroundTint="@android:color/transparent"
+                android:inputType="textEmailAddress" />
+    </RelativeLayout>
 
-    <EditText
-        android:id="@+id/password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="60dp"
-        android:layout_marginTop="@dimen/dimen_login"
-        android:layout_marginRight="60dp"
-        android:ems="10"
-        android:hint="@string/password"
-        android:inputType="textPassword" />
+    <RelativeLayout
+        android:layout_gravity="center"
+        android:layout_width="250dp"
+        android:layout_height="50dp">
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/shape_textblock"
+            android:layout_centerInParent="true"
+            android:padding="5dp"/>
+            <EditText
+                android:id="@+id/password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/password"
+                android:textColorHint="#BDBDBD"
+                android:inputType="textPassword"
+                android:padding="15dp"
+                android:backgroundTint="@android:color/transparent"/>
+    </RelativeLayout>
 
     <Button
         android:id="@+id/btnLogin"
@@ -45,7 +67,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="@dimen/dimen_login"
-        android:background="@color/colorPrimaryDark"
+        android:background="@drawable/shape_login"
         android:onClick="onLogginButtonClick"
-        android:text="Button" />
+        android:text="@string/btn_login"
+        android:textColor="#212121" />
 </LinearLayout>

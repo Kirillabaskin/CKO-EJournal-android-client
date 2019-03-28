@@ -14,9 +14,6 @@ public class ProfileActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_layout);
-        ((TextView)findViewById(R.id.first_name)).setText("Иван");
-        ((TextView)findViewById(R.id.second_name)).setText("Иванов");
-        ((TextView)findViewById(R.id.last_name)).setText("Иванович");
     }
 
     public void onClickExample(View view){
