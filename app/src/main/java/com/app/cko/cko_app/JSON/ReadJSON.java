@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
+import java.util.Arrays;
 
 import com.app.cko.cko_app.Model.Course;
 import com.app.cko.cko_app.Model.Lesson;
@@ -38,10 +39,10 @@ public class ReadJSON {
                 lessons[j]=new Lesson();
                 lessons[j].setClassMark(jsLesson.getInt("ClassMark"));
                 lessons[j].setHomeMark(jsLesson.getInt("HomeMark"));
-                lessons[j].setHomwWork(jsLesson.getString("Homework"));
+                lessons[j].setHomeWork(jsLesson.getString("Homework"));
                 lessons[j].setTheme(jsLesson.getString("Theme"));
             }
-            temp.setLessons(lessons);
+            temp.setLessons(new ArrayList<Lesson>(Arrays.asList(lessons)));
             courses.add(temp);
         }
         return courses;

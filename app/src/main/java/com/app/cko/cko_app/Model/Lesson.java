@@ -1,10 +1,12 @@
 package com.app.cko.cko_app.Model;
 
-public class Lesson {
+import java.io.Serializable;
+
+public class Lesson implements Serializable {
     private int lessonNumber;
     private int classMark;
     private int homeMark;
-    private String homwWork;
+    private String homeWork;
     private String theme;
 
     public int getLessonNumber() {
@@ -31,12 +33,12 @@ public class Lesson {
         this.homeMark = homeMark;
     }
 
-    public String getHomwWork() {
-        return homwWork;
+    public String getHomeWork() {
+        return homeWork;
     }
 
-    public void setHomwWork(String homwWork) {
-        this.homwWork = homwWork;
+    public void setHomeWork(String homwWork) {
+        this.homeWork = homwWork;
     }
 
     public String getTheme() {

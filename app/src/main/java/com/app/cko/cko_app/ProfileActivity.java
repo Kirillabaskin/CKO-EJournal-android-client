@@ -42,8 +42,11 @@ public class ProfileActivity extends AppCompatActivity {
 
     }
 
-    public void onClickExample(View view){
-        Intent intent = new Intent(this,EducationActivity.class);
+    public void onClickExample(View view) {
+        int position = (int) view.getTag();
+        Intent intent = new Intent(this, EducationActivity.class);
+        intent.putExtra("Lessons",coursesArrayList.get(position).getLessons());
+        intent.putExtra("Title",coursesArrayList.get(position).getCourseName());
         startActivity(intent);
         //////
     }

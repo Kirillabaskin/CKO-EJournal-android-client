@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.app.cko.cko_app.R;
@@ -49,6 +50,7 @@ public class CourseAdapter extends BaseAdapter {
 
         ((TextView)view.findViewById(R.id.teacher_txt)).setText(course.getTeacher());
         ((TextView)view.findViewById(R.id.course_txt)).setText(course.getCourseName());
+        (view.findViewById(R.id.marks_btn)).setTag(position);
 
         return view;
     }

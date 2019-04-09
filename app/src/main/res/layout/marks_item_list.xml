@@ -5,15 +5,6 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/list_date"
-        style="@style/TextViewStyle"
-        android:layout_width="60dp"
-        android:layout_height="@dimen/marks_item_height"
-        android:gravity="left|center"
-        android:text="Text"
-        android:textSize="@dimen/marks_item_text_size" />
-
-    <TextView
         android:id="@+id/list_title"
         style="@style/TextViewStyle"
         android:layout_width="wrap_content"

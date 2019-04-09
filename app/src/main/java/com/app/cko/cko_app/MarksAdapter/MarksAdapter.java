@@ -7,17 +7,18 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.app.cko.cko_app.Model.Lesson;
 import com.app.cko.cko_app.R;
 
 import java.util.ArrayList;
 
 public class MarksAdapter extends BaseAdapter {
-
+    //TODO:переделать. Marks и Lesson одно и тоже
     Context context;
     LayoutInflater layoutInflater;
-    ArrayList<Marks> marksArrayList;
+    ArrayList<Lesson> marksArrayList;
 
-    public MarksAdapter(Context context,ArrayList<Marks> marks){
+    public MarksAdapter(Context context,ArrayList<Lesson> marks){
         this.context=context;
         marksArrayList=marks;
         layoutInflater=(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
@@ -46,13 +47,11 @@ public class MarksAdapter extends BaseAdapter {
             view=layoutInflater.inflate(R.layout.marks_item_list,parent,false);
         }
 
-        Marks m=(Marks) getItem(position);
+        Lesson m=(Lesson) getItem(position);
 
-
-        ((TextView)view.findViewById(R.id.list_date)).setText(m.getDate());
-        ((TextView)view.findViewById(R.id.list_title)).setText(m.getTitle());
-        ((TextView)view.findViewById(R.id.list_mark)).setText(m.getMark());
-        ((TextView)view.findViewById(R.id.list_homework)).setText(m.getHomeWork());
+        ((TextView)view.findViewById(R.id.list_title)).setText(m.getTheme());
+        ((TextView)view.findViewById(R.id.list_mark)).setText(String.valueOf(m.getClassMark()));
+        ((TextView)view.findViewById(R.id.list_homework)).setText(String.valueOf(m.getHomeMark()));
         return view;
     }
 }

@@ -6,9 +6,11 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.app.cko.cko_app.MarksAdapter.Marks;
 import com.app.cko.cko_app.MarksAdapter.MarksAdapter;
+import com.app.cko.cko_app.Model.Lesson;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -17,24 +19,19 @@ public class EducationActivity extends AppCompatActivity {
 
     ArrayList<Marks> marksArrayList=new ArrayList<Marks>();
     MarksAdapter marksAdapter;
+    ArrayList<Lesson> lessons;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.education_layout);
-
-        fillMarks(20);
-        marksAdapter = new MarksAdapter(this,marksArrayList);
+        Intent intent=getIntent();
+        ((TextView)findViewById(R.id.marks_title)).setText(intent.getStringExtra("Title"));
+        lessons=(ArrayList<Lesson>)intent.getSerializableExtra("Lessons");
+        marksAdapter = new MarksAdapter(this,lessons);
 
         ListView lw=findViewById(R.id.lv_marks);
         lw.setAdapter(marksAdapter);
-    }
-
-    void fillMarks(int n) {
-        marksArrayList.add(new Marks("Дата","Тема занятия","Оценка","ДЗ"));
-        for (int i = 0; i < n; i++) {
-            marksArrayList.add(new Marks("15.03","work in Class","5","HW"));
-        }
     }
 
     public void onMenuClick(View view){

@@ -1,17 +1,19 @@
 package com.app.cko.cko_app.Model;
 
+import java.util.ArrayList;
+
 public class Course {
-    private Lesson[] lessons;
+    private ArrayList<Lesson> lessons;
     private String groupName;
     private String courseName;
     private String teacher;
     private int amount;
 
-    public Lesson[] getLessons() {
+    public ArrayList<Lesson> getLessons() {
         return lessons;
     }
 
-    public void setLessons(Lesson[] lessons) {
+    public void setLessons(ArrayList<Lesson> lessons) {
         this.lessons = lessons;
     }
 
