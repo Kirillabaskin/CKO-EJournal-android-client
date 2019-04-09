@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:fitsSystemWindows="true">
 
-    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -39,63 +39,15 @@
                 android:textColor="#FFFFFF"/>
         </RelativeLayout>
 
-        <!-- Пока без Listview TODO: ListView in profile activity  -->
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="140dp"
-            android:layout_marginTop="10dp">
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:src="@drawable/shape_course"
-                android:paddingLeft="10dp"
-                android:paddingRight="10dp"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:text="Моделирование"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:text="СБ 12:00"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:text="Преподователь"
-                    android:textSize="20sp" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="30dp"
-                    android:text="Рамазанова Алиса"
-                    android:textSize="20sp" />
-            </LinearLayout>
-        </RelativeLayout>
-
-
-        <Button
-            android:id="@+id/example"
+        <ListView
+            android:id="@+id/courses_lv"
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:onClick="onClickExample"
-            android:textSize="20sp"
-            android:layout_margin="10dp"
-            android:textColor="#FFFFFF"
-            android:text="@string/my_marks"
-            android:background="@drawable/shape"
-            />
+            android:layout_height="match_parent" />
+        <!-- Пока без Listview TODO: ListView in profile activity  -->
+
+
+
+
     </LinearLayout>
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"

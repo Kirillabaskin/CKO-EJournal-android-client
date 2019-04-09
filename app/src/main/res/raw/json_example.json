@@ -1,0 +1,43 @@
+[
+  {
+    "Lessons": [
+      {"LessonNumber":1,
+        "ClassMark":2,
+        "HomeMark":3,
+        "Homework":"homework1_1",
+        "Theme":"theme1_1"
+      },
+      {
+        "LessonNumber":2,
+        "ClassMark":5,
+        "HomeMark":4,
+        "Homework":"homework2_1",
+        "Theme":"theme2_1"
+      }
+    ],
+    "GroupName":"MP-34",
+    "CourseName":"excel",
+    "Teacher":"aaaaaa",
+    "Amount":40
+  },
+  {
+    "Lessons":[
+      {"LessonNumber":1,
+        "ClassMark":4,
+        "HomeMark":5,
+        "Homework":"homework1",
+        "Theme":"theme1"},
+      {
+        "LessonNumber":2,
+        "ClassMark":2,
+        "HomeMark":2,
+        "Homework":"homework2",
+        "Theme":"theme2"
+      }
+    ],
+    "GroupName":"MP-33",
+    "CourseName":"C++",
+    "Teacher":"aaaaaa",
+    "Amount":20
+  }
+]
