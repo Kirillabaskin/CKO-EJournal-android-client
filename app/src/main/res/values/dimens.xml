@@ -1,10 +1,12 @@
 <resources>
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="dimen_login">10dp</dimen>
+    <dimen name="text_block_corner_login">50dp</dimen>
+    <dimen name="corner_login">75dp</dimen>
     <!-- Dimens for education layout -->
     <dimen name="marks_item_width">240dp</dimen>
     <dimen name="marks_item_height">60dp</dimen>
     <dimen name="marks_item_text_size">20sp</dimen>
     <!-- Dimens for profile shape courses -->
-    <dimen name="curses_corner">20dp</dimen>
+    <dimen name="corner">15dp</dimen>
 </resources>

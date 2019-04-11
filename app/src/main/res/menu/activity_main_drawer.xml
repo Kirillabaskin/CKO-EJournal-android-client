@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:title="@string/profile_btn" />
-    <item android:title="@string/education_btn"/>
-    <item android:title="@string/news_btn"/>
-    <item android:title="@string/notification_btn"/>
+    <item
+        android:id="@+id/menu_profile"
+        android:title="@string/profile_btn" />
+    <item
+        android:id="@+id/menu_news"
+        android:title="@string/news_btn"/>
+    <item
+        android:id="@+id/menu_notifications"
+        android:title="@string/notification_btn"/>
 </menu>

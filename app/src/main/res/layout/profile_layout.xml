@@ -42,11 +42,8 @@
         <ListView
             android:id="@+id/courses_lv"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
-        <!-- Пока без Listview TODO: ListView in profile activity  -->
-
-
-
+            android:layout_height="match_parent"
+            android:divider="#FFFFFF"/>
 
     </LinearLayout>
     <android.support.design.widget.NavigationView

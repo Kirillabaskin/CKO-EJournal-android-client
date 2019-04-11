@@ -3,16 +3,16 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
     <solid
-        android:color="#1976D2"
+        android:color="@color/colorPrimaryBlue"
         />
     <stroke
         android:width="3dp"
-        android:color="#FFFFFF"
+        android:color="@color/colorText"
         />
     <corners
-        android:topLeftRadius="74dp"
-        android:topRightRadius="74dp"
-        android:bottomRightRadius="74dp"
-        android:bottomLeftRadius="74dp"/>
+        android:topLeftRadius="@dimen/corner_login"
+        android:topRightRadius="@dimen/corner_login"
+        android:bottomRightRadius="@dimen/corner_login"
+        android:bottomLeftRadius="@dimen/corner_login"/>
 </shape>
 

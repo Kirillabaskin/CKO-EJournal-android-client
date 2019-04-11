@@ -18,8 +18,8 @@ import com.app.cko.cko_app.Model.Lesson;
 import com.app.cko.cko_app.R;
 
 public class ReadJSON {
-    public static ArrayList<Course> readCourseJSONFile(Context context) throws IOException,JSONException {
-        String jsonText = readText(context, R.raw.json_example);
+    public static ArrayList<Course> readCourseJSONFile(String msg) throws IOException,JSONException {
+        String jsonText = msg;
 
         JSONArray jsonArray = new JSONArray(jsonText);
         ArrayList<Course> courses=new ArrayList<Course>();

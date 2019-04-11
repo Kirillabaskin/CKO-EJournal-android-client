@@ -6,8 +6,8 @@
         android:color="@color/colorPrimary"
         />
     <corners
-        android:topLeftRadius="@dimen/curses_corner"
-        android:topRightRadius="@dimen/curses_corner"
-        android:bottomRightRadius="@dimen/curses_corner"
-        android:bottomLeftRadius="@dimen/curses_corner"/>
+        android:topLeftRadius="@dimen/corner"
+        android:topRightRadius="@dimen/corner"
+        android:bottomRightRadius="@dimen/corner"
+        android:bottomLeftRadius="@dimen/corner"/>
 </shape>

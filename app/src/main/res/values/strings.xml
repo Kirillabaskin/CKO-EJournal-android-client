@@ -6,7 +6,7 @@
     <string name="btn_login">Войти</string>
     <!-- Strings for profile activity -->
     <string name="main_activity_title">Профиль</string>
-    <string name="courses">Курсы</string>
+    <string name="courses">Мои курсы</string>
     <string name="my_marks">Оценки</string>
     <!-- Strings for marks activity -->
     <string name="education_title">Оценки</string>

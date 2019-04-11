@@ -34,8 +34,8 @@
                 android:layout_height="wrap_content"
                 android:padding="15dp"
                 android:hint="@string/login"
-                android:textColorHint="#BDBDBD"
-                android:textColor="#212121"
+                android:textColorHint="@color/colorHintText"
+                android:textColor="@color/colorPrimaryText"
                 android:backgroundTint="@android:color/transparent"
                 android:inputType="textEmailAddress" />
     </RelativeLayout>
@@ -55,8 +55,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/password"
-                android:textColorHint="#BDBDBD"
-                android:textColor="#212121"
+                android:textColorHint="@color/colorHintText"
+                android:textColor="@color/colorPrimaryText"
                 android:inputType="textPassword"
                 android:padding="15dp"
                 android:backgroundTint="@android:color/transparent"/>
@@ -71,5 +71,5 @@
         android:background="@drawable/shape_login"
         android:onClick="onLogginButtonClick"
         android:text="@string/btn_login"
-        android:textColor="#FFFFFF" />
+        android:textColor="@color/colorText" />
 </LinearLayout>

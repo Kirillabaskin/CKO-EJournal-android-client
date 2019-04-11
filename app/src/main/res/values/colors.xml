@@ -6,6 +6,8 @@
     <color name="colorPrimaryText">#212121</color>
     <color name="colorSecondaryText">#757575</color>
     <color name="colorText">#FFFFFF</color>
+    <color name="colorHintText">#BDBDBD</color>
     <color name="colorDivider">#BDBDBD</color>
     <color name="colorAccent">#448AFF</color>
+    <color name="colorPrimaryBlue">#1976D2</color>
 </resources>

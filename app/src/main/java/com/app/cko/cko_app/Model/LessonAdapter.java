@@ -1,4 +1,4 @@
-package com.app.cko.cko_app.MarksAdapter;
+package com.app.cko.cko_app.Model;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,26 +12,25 @@ import com.app.cko.cko_app.R;
 
 import java.util.ArrayList;
 
-public class MarksAdapter extends BaseAdapter {
-    //TODO:переделать. Marks и Lesson одно и тоже
-    Context context;
-    LayoutInflater layoutInflater;
-    ArrayList<Lesson> marksArrayList;
+public class LessonAdapter extends BaseAdapter {
+    private Context context;
+    private LayoutInflater layoutInflater;
+    private ArrayList<Lesson> lessonArrayList;
 
-    public MarksAdapter(Context context,ArrayList<Lesson> marks){
+    public LessonAdapter(Context context, ArrayList<Lesson> marks){
         this.context=context;
-        marksArrayList=marks;
+        lessonArrayList=marks;
         layoutInflater=(LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
     @Override
     public int getCount() {
-        return marksArrayList.size();
+        return lessonArrayList.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return marksArrayList.get(position);
+        return lessonArrayList.get(position);
     }
 
     @Override

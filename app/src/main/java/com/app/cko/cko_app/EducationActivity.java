@@ -8,17 +8,14 @@ import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.app.cko.cko_app.MarksAdapter.Marks;
-import com.app.cko.cko_app.MarksAdapter.MarksAdapter;
+import com.app.cko.cko_app.Model.LessonAdapter;
 import com.app.cko.cko_app.Model.Lesson;
 
 import java.util.ArrayList;
-import java.util.Date;
 
 public class EducationActivity extends AppCompatActivity {
 
-    ArrayList<Marks> marksArrayList=new ArrayList<Marks>();
-    MarksAdapter marksAdapter;
+    LessonAdapter marksAdapter;
     ArrayList<Lesson> lessons;
 
     @Override
@@ -28,7 +25,7 @@ public class EducationActivity extends AppCompatActivity {
         Intent intent=getIntent();
         ((TextView)findViewById(R.id.marks_title)).setText(intent.getStringExtra("Title"));
         lessons=(ArrayList<Lesson>)intent.getSerializableExtra("Lessons");
-        marksAdapter = new MarksAdapter(this,lessons);
+        marksAdapter = new LessonAdapter(this,lessons);
 
         ListView lw=findViewById(R.id.lv_marks);
         lw.setAdapter(marksAdapter);
