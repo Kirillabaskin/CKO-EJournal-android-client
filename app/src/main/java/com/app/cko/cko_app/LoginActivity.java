@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 
 import java.io.IOException;
 
@@ -47,10 +48,9 @@ public class LoginActivity extends AppCompatActivity{
         }
 
         @Override
-        protected Void doInBackground(String...params) {
-
-            RequestBody formBody = new FormBody.Builder().add("login", "abcde")
-                    .add("password","12345")
+        protected Void doInBackground(String...params) {//abcde 12345
+            RequestBody formBody = new FormBody.Builder().add("login", ((EditText)findViewById(R.id.login)).getText().toString())
+                    .add("password",((EditText)findViewById(R.id.password)).getText().toString())
                     .build();
             Request request = new Request.Builder().url(url).post(formBody).build();
             try {
@@ -59,7 +59,6 @@ public class LoginActivity extends AppCompatActivity{
                     throw new IOException("Unexpected code " + response);
                 profileString= response.body().string();
                 Intent intent = new Intent(context,ProfileActivity.class);
-                Log.i("CKO_APP_REQUEST",profileString);
                 intent.putExtra("JSON",profileString);
                 startActivity(intent);
             }
@@ -67,6 +66,12 @@ public class LoginActivity extends AppCompatActivity{
                 e.printStackTrace();
             }
             return null;
+        }
+
+        @Override
+        protected void onPreExecute() {
+            super.onPreExecute();
+            findViewById(R.id.progressBar).setVisibility(View.VISIBLE);
         }
     }
     public void onLogginButtonClick(View view){

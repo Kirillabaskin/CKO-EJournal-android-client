@@ -1,6 +1,7 @@
 package com.app.cko.cko_app.JSON;
 
 import android.content.Context;
+import android.util.Log;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -14,18 +15,31 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 import com.app.cko.cko_app.Model.Course;
+import com.app.cko.cko_app.Model.GroupEvent;
 import com.app.cko.cko_app.Model.Lesson;
+import com.app.cko.cko_app.Model.Profile;
 import com.app.cko.cko_app.R;
 
 public class ReadJSON {
-    public static ArrayList<Course> readCourseJSONFile(String msg) throws IOException,JSONException {
-        String jsonText = msg;
-
-        JSONArray jsonArray = new JSONArray(jsonText);
+    public static Profile readCourseJSONFile(String msg) throws IOException,JSONException {
+        Profile profile = new Profile();
+        Log.i("CKO_APP ",msg);
+        JSONObject dirObject = new JSONObject(msg);
+        profile.setProfileName(dirObject.getString("RealName"));
+        JSONArray jsonArray = dirObject.getJSONArray("GroupsInfo");
         ArrayList<Course> courses=new ArrayList<Course>();
+        profile.setEvents(new ArrayList<String[]>());
         Course temp;
         for(int i=0;i<jsonArray.length();i++){
             JSONObject jsonObject=jsonArray.getJSONObject(i);
+
+            JSONArray eventsArray= jsonObject.getJSONArray("Events");
+            String[] mas = new String[eventsArray.length()*2];
+            for(int j=0;j<2*eventsArray.length();j+=2){
+                mas[j]=((JSONObject)eventsArray.get(i)).getString("Event");
+                mas[j+1]=((JSONObject)eventsArray.get(i)).getString("Date");
+            }
+            profile.getEvents().add(mas);
             temp=new Course();
             temp.setGroupName(jsonObject.getString("GroupName"));
             temp.setCourseName(jsonObject.getString("CourseName"));
@@ -45,7 +59,8 @@ public class ReadJSON {
             temp.setLessons(new ArrayList<Lesson>(Arrays.asList(lessons)));
             courses.add(temp);
         }
-        return courses;
+        profile.setCourses(courses);
+        return profile;
     }
 
     private static String readText(Context context, int resId) throws IOException {

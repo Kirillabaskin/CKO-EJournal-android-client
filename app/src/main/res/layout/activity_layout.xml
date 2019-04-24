@@ -72,4 +72,10 @@
         android:onClick="onLogginButtonClick"
         android:text="@string/btn_login"
         android:textColor="@color/colorText" />
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/CircularProgress"
+        android:layout_width="125dp"
+        android:layout_height="122dp"
+        android:visibility="invisible" />
 </LinearLayout>
