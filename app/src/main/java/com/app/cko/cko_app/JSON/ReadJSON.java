@@ -36,11 +36,12 @@ public class ReadJSON {
             JSONArray eventsArray= jsonObject.getJSONArray("Events");
             String[] mas = new String[eventsArray.length()*2];
             for(int j=0;j<2*eventsArray.length();j+=2){
-                mas[j]=((JSONObject)eventsArray.get(i)).getString("Event");
-                mas[j+1]=((JSONObject)eventsArray.get(i)).getString("Date");
+                mas[j]=((JSONObject)eventsArray.get(j/2)).getString("Event");
+                mas[j+1]=((JSONObject)eventsArray.get(j/2)).getString("Date");
             }
             profile.getEvents().add(mas);
             temp=new Course();
+            temp.setDate(jsonObject.getString("Info"));
             temp.setGroupName(jsonObject.getString("GroupName"));
             temp.setCourseName(jsonObject.getString("CourseName"));
             temp.setTeacher(jsonObject.getString("Teacher"));
@@ -51,8 +52,8 @@ public class ReadJSON {
                 JSONObject jsLesson=jsLessons.getJSONObject(j);
                 //int index=jsLesson.getInt("LessonNumber");
                 lessons[j]=new Lesson();
-                lessons[j].setClassMark(jsLesson.getInt("ClassMark"));
-                lessons[j].setHomeMark(jsLesson.getInt("HomeMark"));
+                lessons[j].setClassMark(jsLesson.getString("ClassMark"));
+                lessons[j].setHomeMark(jsLesson.getString("HomeMark"));
                 lessons[j].setHomeWork(jsLesson.getString("Homework"));
                 lessons[j].setTheme(jsLesson.getString("Theme"));
             }

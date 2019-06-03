@@ -10,6 +10,8 @@ import android.widget.TextView;
 
 import com.app.cko.cko_app.R;
 
+import org.w3c.dom.Text;
+
 import java.util.ArrayList;
 
 public class CourseAdapter extends BaseAdapter {
@@ -50,6 +52,7 @@ public class CourseAdapter extends BaseAdapter {
 
         ((TextView)view.findViewById(R.id.teacher_txt)).setText(course.getTeacher());
         ((TextView)view.findViewById(R.id.course_txt)).setText(course.getCourseName());
+        ((TextView)view.findViewById(R.id.course_date_txt)).setText(course.getDate());
         (view.findViewById(R.id.marks_btn)).setTag(position);
 
         return view;

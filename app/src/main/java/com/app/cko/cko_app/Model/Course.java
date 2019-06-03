@@ -7,6 +7,7 @@ public class Course {
     private String groupName;
     private String courseName;
     private String teacher;
+    private String date;
     private int amount;
 
     public ArrayList<Lesson> getLessons() {
@@ -47,5 +48,13 @@ public class Course {
 
     public void setAmount(int amount) {
         this.amount = amount;
+    }
+
+    public String getDate() {
+        return date;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
     }
 }

@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import java.io.IOException;
 
@@ -37,10 +38,12 @@ public class LoginActivity extends AppCompatActivity{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_layout);
+        ((ProgressBar)findViewById(R.id.progressBar)).setVisibility(View.GONE);
     }
 
     public class OkHttpHandler extends AsyncTask<String, Void, Void> {
 
+        private boolean isSuc=false;
         private Context context;
 
         public OkHttpHandler(Context context){
@@ -57,6 +60,7 @@ public class LoginActivity extends AppCompatActivity{
                 Response response = client.newCall(request).execute();
                 if (!response.isSuccessful())
                     throw new IOException("Unexpected code " + response);
+                isSuc=true;
                 profileString= response.body().string();
                 Intent intent = new Intent(context,ProfileActivity.class);
                 intent.putExtra("JSON",profileString);
@@ -69,12 +73,26 @@ public class LoginActivity extends AppCompatActivity{
         }
 
         @Override
+        protected void onPostExecute(Void result) {
+            super.onPostExecute(result);
+            if(!isSuc) {
+                Toast.makeText(context,"Не правильный пароль или логин",Toast.LENGTH_SHORT).show();
+                findViewById(R.id.progressBar).setVisibility(View.GONE);
+                findViewById(R.id.login_linear_layout).setVisibility(View.VISIBLE);
+                ((EditText) findViewById(R.id.password)).setText("");
+            }
+        }
+
+        @Override
         protected void onPreExecute() {
             super.onPreExecute();
             findViewById(R.id.progressBar).setVisibility(View.VISIBLE);
+            findViewById(R.id.login_linear_layout).setVisibility(View.GONE);
         }
     }
     public void onLogginButtonClick(View view){
+        //((ProgressBar)findViewById(R.id.progressBar)).setVisibility(View.VISIBLE);
+
         OkHttpHandler okHttpHandler= new OkHttpHandler(this);
         okHttpHandler.execute(((EditText)findViewById(R.id.login)).getText().toString(),
                 ((EditText)findViewById(R.id.password)).getText().toString());

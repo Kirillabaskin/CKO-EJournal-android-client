@@ -49,8 +49,8 @@ public class LessonAdapter extends BaseAdapter {
         Lesson m=(Lesson) getItem(position);
 
         ((TextView)view.findViewById(R.id.list_title)).setText(m.getTheme());
-        ((TextView)view.findViewById(R.id.list_mark)).setText(String.valueOf(m.getClassMark()));
-        ((TextView)view.findViewById(R.id.list_homework)).setText(String.valueOf(m.getHomeMark()));
+        ((TextView)view.findViewById(R.id.list_mark)).setText(m.getClassMark());
+        ((TextView)view.findViewById(R.id.list_homework)).setText(m.getHomeMark());
         return view;
     }
 }

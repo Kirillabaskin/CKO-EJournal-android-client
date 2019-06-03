@@ -4,8 +4,8 @@ import java.io.Serializable;
 
 public class Lesson implements Serializable {
     private int lessonNumber;
-    private int classMark;
-    private int homeMark;
+    private String classMark;
+    private String homeMark;
     private String homeWork;
     private String theme;
 
@@ -17,19 +17,19 @@ public class Lesson implements Serializable {
         this.lessonNumber = lessonNumber;
     }
 
-    public int getClassMark() {
+    public String getClassMark() {
         return classMark;
     }
 
-    public void setClassMark(int classMark) {
+    public void setClassMark(String classMark) {
         this.classMark = classMark;
     }
 
-    public int getHomeMark() {
+    public String getHomeMark() {
         return homeMark;
     }
 
-    public void setHomeMark(int homeMark) {
+    public void setHomeMark(String homeMark) {
         this.homeMark = homeMark;
     }
 
@@ -37,8 +37,8 @@ public class Lesson implements Serializable {
         return homeWork;
     }
 
-    public void setHomeWork(String homwWork) {
-        this.homeWork = homwWork;
+    public void setHomeWork(String homeWork) {
+        this.homeWork = homeWork;
     }
 
     public String getTheme() {
